@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kim Hyo-eun | Media Content Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #ff3366;
+            --bg-color: #121212;
+            --text-color: #ffffff;
+            --card-bg: #1e1e1e;
+        }
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(180deg, #000000 0%, var(--bg-color) 100%);
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            color: #aaaaaa;
+            font-size: 1.2rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .section-title {
+            font-size: 2rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img, .card iframe {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border: none;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .stats {
+            display: flex;
+            gap: 15px;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        a.btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>김효은 | Media Content Creator</h1>
+        <p>콘텐츠 포트폴리오</p>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">Promo Reels</h2>
+        <div class="grid">
+            <div class="card">
+                <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+                <div class="card-content">
+                    <h3>프로모션 릴스 프로젝트</h3>
+                    <p>타겟 오디언스를 겨냥한 숏폼 콘텐츠 기획 및 제작</p>
+                    <div class="stats" id="youtube-stats-1">
+                        <span>조회수: 로딩중...</span>
+                        <span>좋아요: 로딩중...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+
+        <h2 class="section-title">Design & Merchandise</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://via.placeholder.com/400x300?text=Merch+Design" alt="굿즈 디자인">
+                <div class="card-content">
+                    <h3>브랜딩 굿즈 디자인</h3>
+                    <p>IP를 활용한 스티커 및 다양한 굿즈 애셋 제작</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/400x300?text=Promo+Poster" alt="홍보 포스터">
+                <div class="card-content">
+                    <h3>프로모션 포스터</h3>
+                    <p>이벤트 및 캠페인 홍보를 위한 키비주얼 포스터 디자인</p>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+
+        <h2 class="section-title">Web & Campaigns</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://via.placeholder.com/400x300?text=Landing+Page" alt="랜딩페이지">
+                <div class="card-content">
+                    <h3>프로모션 랜딩 페이지</h3>
+                    <p>사용자 전환율을 높이기 위한 이벤트 웹페이지 구축</p>
+                    <a href="https://beyondthescene.aiapp.help/" class="btn" target="_blank">사이트 방문하기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
