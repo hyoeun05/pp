@@ -48,6 +48,17 @@
             grid-template-columns: repeat(3, 1fr); /* 👈 3개 일렬 배치로 변경 */
             gap: 20px;
         }
+        .reels-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 20px;
+        }
+        .reels-grid .card img {
+            width: 100% !important;
+            height: auto !important;
+            aspect-ratio: 9 / 16 !important;
+            object-fit: cover !important;
+        }
         .card {
             background-color: var(--card-bg);
             border-radius: 12px;
@@ -60,9 +71,15 @@
         .card img, .card iframe {
             width: 100%;
             height: 250px;
-            object-fit: cover;
+            object-fit: contain;
             border: none;
         }
+        .reels-grid .card img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 9 / 16;
+            object-fit: cover;
+    }
         .card-content {
             padding: 20px;
         }
@@ -94,19 +111,35 @@
 
     <div class="container">
         <h2 class="section-title">Promo Reels</h2>
-        <div class="grid">
+        <div class="grid reels-grid"">
             <div class="card">
-                <iframe src="https://youtube.com/shorts/JHpMIOUBFhk?si=8iQMtAantY7t_Fdv" allowfullscreen></iframe>
+                <a href="https://youtube.com/shorts/JHpMIOUBFhk" target="_blank" style="text-decoration: none; color: inherit;">
+                    <img src="https://img.youtube.com/vi/JHpMIOUBFhk/maxresdefault.jpg" alt="프로모션 릴스 썸네일">
+                </a>
                 <div class="card-content">
                     <h3>프로모션 릴스 프로젝트</h3>
                     <p>타겟 오디언스를 겨냥한 숏폼 콘텐츠 기획 및 제작</p>
                     <div class="stats" id="youtube-stats-1">
-                        <span>조회수: 로딩중...</span>
-                        <span>좋아요: 로딩중...</span>
+                        <span>👀 조회수: 로딩중...</span>
+                        <span>❤️ 좋아요: 로딩중...</span>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="card">
+        <a href="https://youtube.com/shorts/jRb2p_JA7Qg" target="_blank" style="text-decoration: none; color: inherit;">
+            <img src="https://img.youtube.com/vi/jRb2p_JA7Qg/maxresdefault.jpg" alt="프로모션 릴스 두번째">
+        </a>
+        <div class="card-content">
+            <h3>프로모션 릴스 프로젝트 2</h3>
+            <p>새로운 프로모션 쇼츠 콘텐츠 기획 (설명을 수정해보세요!)</p>
+            <div class="stats" id="youtube-stats-jRb2p_JA7Qg">
+                <span>👀 조회수: 로딩중...</span>
+                <span>❤️ 좋아요: 로딩중...</span>
+            </div>
+        </div>
+    </div>
 
         <br><br>
 
