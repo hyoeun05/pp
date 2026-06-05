@@ -286,8 +286,6 @@
         const VIDEO_IDS = 'JHpMIOUBFhk,jRb2p_JA7Qg'; 
 
         async function getYouTubeStats() {
-            if(YOUTUBE_API_KEY === 'AIzaSyBGRLXRMrTnSKZFEOrwQbG2EkS7reUntsQ') return;
-
             try {
                 const response = await fetch(`https://www.googleapis.com/youtube/v3/videos?part=statistics&id=${VIDEO_IDS}&key=${YOUTUBE_API_KEY}`);
                 const data = await response.json();
