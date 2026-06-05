@@ -168,20 +168,22 @@
         }
 
         /* 이미지 아래 이름과 설명 텍스트 */
-        .merch-info h3 {
+       /* 추가된 텍스트 공간 스타일 */
+        .merch-text {
+            padding: 25px 30px;
+            border-top: 1px solid #eeeeee;
+        }
+        .merch-text h3 {
             font-size: 1.5rem;
             font-weight: 900;
             margin: 0 0 10px 0;
             color: var(--black);
-            letter-spacing: -0.5px;
         }
-        
-        .merch-info p {
+        .merch-text p {
             font-size: 1rem;
-            color: #555555; /* 너무 진하지 않은 부드러운 회색 */
+            color: var(--grey);
             margin: 0;
             line-height: 1.5;
-            word-break: keep-all; /* 단어 단위로 줄바꿈 되도록 설정 */
         }
 
         /* ---------------------------------
@@ -239,7 +241,7 @@
                     <img src="https://img.youtube.com/vi/JHpMIOUBFhk/maxresdefault.jpg" alt="릴스 1">
                 </a>
                 <div class="reel-info">
-                    <h3>프로모션 릴스 01</h3>
+                    <h3> '왕과 사는 남자' 촬영지 홍보</h3>
                     <div class="stats" id="youtube-stats-JHpMIOUBFhk">조회수 불러오는 중...</div>
                 </div>
             </div>
@@ -249,7 +251,7 @@
                     <img src="https://img.youtube.com/vi/jRb2p_JA7Qg/maxresdefault.jpg" alt="릴스 2">
                 </a>
                 <div class="reel-info">
-                    <h3>프로모션 릴스 02</h3>
+                    <h3>영화/드라마 유명 벛꽃 촬영지 홍보</h3>
                     <div class="stats" id="youtube-stats-jRb2p_JA7Qg">조회수 불러오는 중...</div>
                 </div>
             </div>
@@ -259,25 +261,37 @@
     <section class="bg-yellow merch-section">
         <div class="merch-header">
             <h2 class="title-huge" style="font-size: 6vw;">MERCHANDISE</h2>
-            <p> 다양한 브랜딩 키링 굿즈 애셋 기획/제작</p>
+            <p> 지역 홍보 키링 굿즈 기획/제작</p>
         </div>
 
         <div class="merch-gallery">
             <div class="merch-img-box img-left">
                 <img src="키링2.jpg" alt="메인 키링">
+                <div class="merch-text">
+                    <h3>버스정류장 키링</h3>
+                    <p>향호해변 버스 정류장을 담은 아크릴 액체 키링. 눈송이가 흩날리는 겨울 바닷가의 감성을 그대로 담은 키링.</p>
+                </div>
             </div>
             <div class="merch-img-box img-center">
                 <img src="키링3.jpg" alt="키링 베리에이션 1">
+                <div class="merch-text">
+                    <h3>봄날 멤버 키링</h3>
+                    <p>봄날 MV 속 버스 정류장에 앉은 BTS 멤버들의 모습을 담은 키링.</p>
+                </div>
             </div>
             <div class="merch-img-box img-right">
                 <img src="키링.jpg" alt="키링 베리에이션 2">
+                <div class="merch-text">
+                    <h3>도형 키링 컬렉션</h3>
+                    <p>원형·하트·별·꽃·사각·다이아몬드 6가지 모양으로 제작된 향호해변 버스 정류장 키링 컬렉션.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="bg-white web-section">
-        <h2 class="title-huge" style="font-size: 5vw; margin-bottom: 20px;">WEB CAMPAIGN</h2>
-        <p style="font-size: 1.5rem; font-weight: 600; color: var(--grey);">사용자 전환율을 높이기 위한 이벤트 랜딩 페이지 구축</p>
+        <h2 class="title-huge" style="font-size: 5vw; margin-bottom: 20px;">WEB PAGE</h2>
+        <p style="font-size: 1.5rem; font-weight: 600; color: var(--grey);">강릉 향호해변 홍보 페이지</p>
         <a href="https://beyondthescene.aiapp.help/" class="btn-large" target="_blank">VIEW LANDING PAGE ↗</a>
     </section>
 
