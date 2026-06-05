@@ -38,7 +38,7 @@
 
         /* 거대한 타이포그래피 */
         .title-huge {
-            font-size: 8vw; /* 화면 크기에 비례하여 엄청나게 커짐 */
+            font-size: 5vw; /* 화면 크기에 비례하여 엄청나게 커짐 */
             font-weight: 900;
             letter-spacing: -0.05em;
             line-height: 0.9;
@@ -50,7 +50,7 @@
         .text-vertical {
             writing-mode: vertical-rl;
             transform: rotate(180deg);
-            font-size: 6vw;
+            font-size: 3vw;
             font-weight: 900;
             margin-right: 5vw;
             color: var(--black);
@@ -62,7 +62,7 @@
         .hero-section {
             flex-direction: column;
             align-items: flex-start;
-            min-height: 70vh;
+            min-height: 60vh;
             justify-content: center;
         }
         .hero-desc {
@@ -106,7 +106,7 @@
         .reel-info {
             margin-top: 20px;
         }
-        .reel-info h3 { font-size: 1.5rem; font-weight: 800; margin: 0 0 10px; }
+        .reel-info h3 { font-size: 1.2rem; font-weight: 800; margin: 0 0 10px; }
         .stats { font-weight: 800; font-size: 1.1rem; }
 
         /* ---------------------------------
@@ -116,7 +116,7 @@
             flex-direction: column;
         }
         .merch-header {
-            width: 100%;
+            width: 90%;
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
@@ -227,8 +227,7 @@
     <section class="bg-yellow hero-section">
         <h1 class="title-huge">KIM<br>HYO EUN</h1>
         <div class="hero-desc">
-            미디어 콘텐츠 전공의 기획력과 디자인 감각.<br>
-            트렌드를 이끄는 콘텐츠 크리에이터 포트폴리오
+            트렌드를 이끄는 콘텐츠 크리에이터 포트폴리오<br>
         </div>
     </section>
 
@@ -265,12 +264,22 @@
                     <div class="stats" id="youtube-stats-vNcThJkknH0">조회수 불러오는 중...</div>
                 </div>
             </div>
+
+            <div class="reel-item">
+                <a href="https://youtube.com/shorts/zLZBW08PEis" target="_blank">
+                    <img src="https://img.youtube.com/vi/zLZBW08PEis/maxresdefault.jpg" alt="릴스 3">
+                </a>
+                <div class="reel-info">
+                    <h3> '왕과 사는 남자' 무대인사 후기2</h3>
+                    <div class="stats" id="youtube-stats-zLZBW08PEis">조회수 불러오는 중...</div>
+                </div>
+            </div>
         </div>
     </section>
 
     <section class="bg-yellow merch-section">
         <div class="merch-header">
-            <h2 class="title-huge" style="font-size: 6vw;">MERCHANDISE</h2>
+            <h2 class="title-huge" style="font-size: 4vw;">MERCHANDISE</h2>
             <p> 지역 홍보 키링 굿즈 기획/제작</p>
         </div>
 
@@ -279,7 +288,11 @@
                 <img src="키링2.jpg" alt="메인 키링">
                 <div class="merch-text">
                     <h3>버스정류장 키링</h3>
-                    <p>향호해변 버스 정류장을 담은 아크릴 액체 키링. 눈송이가 흩날리는 겨울 바닷가의 감성을 그대로 담은 키링.</p>
+                    <p>
+                        원형·하트·별·꽃·사각·다이아몬드<br>
+                        6가지 모양으로 제작된<br>
+                        향호해변 버스 정류장 키링 컬렉션.
+                </p>
                 </div>
             </div>
             <div class="merch-img-box img-center">
@@ -307,7 +320,7 @@
 
     <script>
         const YOUTUBE_API_KEY = 'AIzaSyBGRLXRMrTnSKZFEOrwQbG2EkS7reUntsQ'; 
-        const VIDEO_IDS = 'JHpMIOUBFhk,jRb2p_JA7Qg,vNcThJkknH0'; 
+        const VIDEO_IDS = 'JHpMIOUBFhk,jRb2p_JA7Qg,vNcThJkknH0,zLZBW08PEis'; 
 
         async function getYouTubeStats() {
             try {
