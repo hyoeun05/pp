@@ -28,7 +28,55 @@
             line-height: 1.6;
             overflow-x: hidden; 
         }
+        /* ---------------------------------
+           이미지 팝업(모달) 스타일
+        --------------------------------- */
+        .modal {
+            display: none; /* 기본으로는 숨겨둠 */
+            position: fixed;
+            z-index: 2000; /* 상단 메뉴바보다 더 위에 오도록 설정 */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85); /* 반투명한 검은색 배경 */
+            backdrop-filter: blur(5px); /* 배경을 살짝 흐리게 */
+            align-items: center;
+            justify-content: center;
+        }
 
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            animation: zoomIn 0.3s ease; /* 부드럽게 커지면서 나타나는 효과 */
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 3.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close-modal:hover {
+            color: var(--yellow); /* 마우스 올리면 노란색으로 변함 */
+        }
+
+        /* 굿즈 이미지에 마우스를 올렸을 때 클릭할 수 있다는 손가락 표시 추가 */
+        .merch-img-box img {
+            cursor: pointer;
+        }
         /* ---------------------------------
            상단 고정 네비게이션 바 (메뉴)
         --------------------------------- */
@@ -270,6 +318,12 @@
 </head>
 <body>
 
+    <!-- 이미지 모달 팝업 구조 -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="expandedImg">
+    </div>
+
     <!-- 화면 우측 상단 고정 네비게이션 메뉴 -->
     <nav class="top-nav">
         <a href="#home">HOME</a>
@@ -345,8 +399,7 @@
                     <h3>버스정류장 키링</h3>
                     <p>
                         원형·하트·별·꽃·사각·다이아몬드<br>
-                        6가지 모양으로 제작된<br>
-                        향호해변 버스 정류장 키링 컬렉션.
+                        6가지 모양으로 제작된 향호해변 버스 정류장 키링.
                 </p>
                 </div>
             </div>
@@ -361,7 +414,8 @@
                 <img src="키링.jpg" alt="키링 베리에이션 2">
                 <div class="merch-text">
                     <h3>도형 키링 컬렉션</h3>
-                    <p>원형·하트·별·꽃·사각·다이아몬드 6가지 모양으로 제작된 향호해변 버스 정류장 키링 컬렉션.</p>
+                    <p>원형·하트·별·꽃·사각·다이아몬드 6가지 모양으로 제작된<br>
+                       향호해변 버스 정류장 키링 컬렉션.</p>
                 </div>
             </div>
         </div>
@@ -403,6 +457,35 @@
         }
 
         document.addEventListener('DOMContentLoaded', getYouTubeStats);
+        // ---------------------------------
+        // 이미지 팝업(모달) 기능
+        // ---------------------------------
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("expandedImg");
+            const closeModal = document.querySelector(".close-modal");
+            const merchImages = document.querySelectorAll(".merch-img-box img");
+
+            // 각 굿즈 이미지를 클릭했을 때
+            merchImages.forEach(img => {
+                img.addEventListener("click", function() {
+                    modal.style.display = "flex";
+                    modalImg.src = this.src; // 클릭한 이미지의 주소를 모달 액자에 쏙 넣음
+                });
+            });
+
+            // 우측 상단 닫기(X) 버튼을 클릭했을 때
+            closeModal.addEventListener("click", function() {
+                modal.style.display = "none";
+            });
+
+            // 사진 밖의 어두운 배경을 클릭해도 창이 닫히도록 설정
+            modal.addEventListener("click", function(event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+        });
     </script>
 </body>
 </html>
